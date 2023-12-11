@@ -1,0 +1,45 @@
+
+<div class="table-responsive">
+
+  <table class="table table-bordered border-bottom-primary border-left-primary" id="dataTable"
+         width="100%" cellspacing="0">
+    <thead>
+    <tr>
+      <th>Id Chambre</th>
+      <th>Numéro</th>
+      <th>Supprimer</th>
+      <th>Modifier</th>
+      <th>Ajouter</th>
+    </tr>
+    </thead>
+
+    <tbody *ngFor="let chambre of chambres" >
+    <tr>
+      <td>{{ chambre.idChambre }}</td>
+      <td>{{ chambre.numchambre }}</td>
+      <!-- Button Delete -->
+      <td >
+
+          <span class="text" >Supprimer</span>
+
+      </td>
+      <!-- Button Delete end-->
+
+      <!-- Button Edit -->
+      <td>
+        <a routerLink="/back/modifierchambre/{{chambre.idChambre}}"  routerLinkActive="active" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                  <i class="fas fa-pen-square"></i>
+                </span>
+          <span class="text">Modifier</span>
+        </a>
+      </td>
+      <td>
+        <span class="text">Ajouter</span>
+      </td>
+      <!-- Button Edit end-->
+    </tr>
+
+    </tbody>
+  </table>
+</div>
