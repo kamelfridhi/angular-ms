@@ -1,0 +1,54 @@
+<div class="table-responsive">
+  <table class="table table-bordered border-bottom-primary border-left-primary" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Numéro de Réservation</th>
+      <th>Début Universitaire</th>
+      <th>Fin Universitaire</th>
+      <th>Est Valide</th>
+      <th>Description</th>
+      <th>Email</th>
+      <th>Téléphone</th>
+      <th>ID Étudiant</th>
+      <th>ID Chambre</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let reservation of reservations">
+    <tr>
+      <td>{{ reservation.idReservation }}</td>
+      <td>{{ reservation.numReservation }}</td>
+      <td>{{ reservation.DebUniversitaire | date }}</td>
+      <td>{{ reservation.FinUniversitaire | date }}</td>
+      <td>{{ reservation.estvalide ? 'Oui' : 'Non' }}</td>
+      <td>{{ reservation.description }}</td>
+      <td>{{ reservation.email }}</td>
+      <td>{{ reservation.phone }}</td>
+      <td>{{ reservation.idEtudiant }}</td>
+      <td>{{ reservation.idChambre }}</td>
+      <!-- Action buttons -->
+      <td>
+        <!-- Button Delete (Replace deleteReservation with your delete method) -->
+        <button class="btn btn-danger btn-icon-split">
+            <span class="icon text-white-50">
+              <i class="fas fa-trash"></i>
+            </span>
+          <span class="text">Supprimer</span>
+        </button>
+        <!-- Button Delete end -->
+
+        <!-- Button Edit (Replace routerLink with the actual route) -->
+        <a [routerLink]="['/edit-reservation', reservation.idReservation]" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-50">
+              <i class="fas fa-pen-square"></i>
+            </span>
+          <span class="text">Modifier</span>
+        </a>
+        <!-- Button Edit end -->
+      </td>
+      <!-- Action buttons end -->
+    </tr>
+    </tbody>
+  </table>
+</div>

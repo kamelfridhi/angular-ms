@@ -1,0 +1,44 @@
+
+<div class="table-responsive">
+
+  <table class="table table-bordered border-bottom-primary border-left-primary" id="dataTable"
+         width="100%" cellspacing="0">
+    <thead>
+    <tr>
+      <th>idBloc</th>
+      <th>nomBloc</th>
+      <th>capaciteBloc</th>
+      <th>Supprimer</th>
+     </tr>
+    </thead>
+
+    <tbody *ngFor="let B of Blocs" >
+    <tr>
+      <td>{{ B.idBloc }}</td>
+      <td>{{ B.nomBloc }}</td>
+      <td>{{ B.capaciteBloc }}</td>
+      <!-- Button Delete -->
+      <td >
+
+        <span class="text" >Supprimer</span>
+
+      </td>
+      <!-- Button Delete end-->
+
+      <!-- Button Edit -->
+      <td>
+        <a   routerLinkActive="active" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                  <i class="fas fa-pen-square"></i>
+                </span>
+          <span class="text">Supprimer</span>
+        </a>
+      </td>
+      <td>
+       </td>
+      <!-- Button Edit end-->
+    </tr>
+
+    </tbody>
+  </table>
+</div>

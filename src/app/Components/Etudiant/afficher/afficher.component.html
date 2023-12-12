@@ -1,0 +1,55 @@
+
+<div class="table-responsive">
+
+  <table class="table table-bordered border-bottom-primary border-left-primary" id="dataTable"
+         width="100%" cellspacing="0">
+    <thead>
+    <tr>
+      <th>idEtudiant</th>
+      <th>Nom</th>
+      <th>prenom</th>
+      <th>cin</th>
+      <th>ecole</th>
+      <th>dateNaissance</th>
+      <th>email</th>
+      <th>passoword</th>
+      <th>Ajouter</th>
+    </tr>
+    </thead>
+
+    <tbody *ngFor="let e of Etudiants" >
+    <tr>
+      <td>{{ e.idEtudiant }}</td>
+      <td>{{ e.nomEt }}</td>
+      <td>{{ e.prenomet }}</td>
+      <td>{{ e.cin }}</td>
+      <td>{{ e.ecole }}</td>
+      <td>{{ e.dateNaissance }}</td>
+      <td>{{ e.email }}</td>
+      <td>{{ e.passoword }}</td>
+      <!-- Button Delete -->
+      <td >
+
+        <span class="text" >Supprimer</span>
+
+      </td>
+      <!-- Button Delete end-->
+
+      <!-- Button Edit -->
+      <td>
+        <a routerLink=""  routerLinkActive="active" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                  <i class="fas fa-pen-square"></i>
+                </span>
+          <span class="text">delete</span>
+        </a>
+      </td>
+      <td>
+        <span class="text">Ajouter</span>
+      </td>
+      <!-- Button Edit end-->
+    </tr>
+
+    </tbody>
+  </table>
+</div>

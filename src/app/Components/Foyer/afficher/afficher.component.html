@@ -1,0 +1,43 @@
+<div class="table-responsive">
+  <table class="table table-bordered border-bottom-primary border-left-primary" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Capacité</th>
+      <!-- Add more headers as needed -->
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let foyer of Foyers">
+    <tr>
+      <td>{{ foyer.idFoyer }}</td>
+      <td>{{ foyer.nomFoyer }}</td>
+      <td>{{ foyer.capaciteFoyer }}</td>
+      <!-- Add more columns as needed -->
+
+      <!-- Action buttons -->
+      <td>
+        <!-- Button Delete -->
+        <button class="btn btn-danger btn-icon-split" >
+            <span class="icon text-white-50">
+              <i class="fas fa-trash"></i>
+            </span>
+          <span class="text">Supprimer</span>
+        </button>
+        <!-- Button Delete end -->
+
+        <!-- Button Edit (Replace routerLink with the actual route) -->
+        <a [routerLink]="['/edit-foyer', foyer.idFoyer]" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-50">
+              <i class="fas fa-pen-square"></i>
+            </span>
+          <span class="text">Modifier</span>
+        </a>
+        <!-- Button Edit end -->
+      </td>
+      <!-- Action buttons end -->
+    </tr>
+    </tbody>
+  </table>
+</div>

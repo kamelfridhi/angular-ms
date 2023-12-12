@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form #ajoutForm="ngForm" (ngSubmit)="ajouteretudiant(ajoutForm)">
+        <div class="form-group">
+          <label for="idEtudiant">ID</label>
+          <input type="number" class="form-control" id="idEtudiant" name="idEtudiant" [(ngModel)]="etudiant.idEtudiant" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nomEt">Nom</label>
+          <input type="text" class="form-control" id="nomEt" name="nomEt" [(ngModel)]="etudiant.nomEt" required>
+        </div>
+
+        <div class="form-group">
+          <label for="prenomet">Prenom</label>
+          <input type="text" class="form-control" id="prenomet" name="prenomet" [(ngModel)]="etudiant.prenomet" required>
+        </div>
+
+        <!-- ... Repeat the pattern for other properties ... -->
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" [(ngModel)]="etudiant.passoword" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div>
+  <app-afficher-etudiant></app-afficher-etudiant>
+</div>
